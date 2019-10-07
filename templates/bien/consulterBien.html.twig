@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des biens{% endblock %}
+
+{% block body %}
+    <center><div style="width: 75%; border: 1px solid black; background-color: background"><br/>
+    <h3><center>Liste des biens :</center></h3>
+    <table width="80%">
+        <tr style="border-bottom:1pt solid black;">
+            <th>Identifiant</th>
+            <th>Nombre de Piece</th>
+            <th>Nombre de Chambre</th>
+            <th>Superficie</th>
+            <th>Prix</th>
+            <th>Chauffage</th>
+            <th>Année</th>
+            <th>Localisation</th>
+            <th>Etat</th>
+            <th>Type</th>
+	</tr>
+    {%  for bien in lesBiens %}
+        <tr style="border-bottom:1pt solid black;">
+            <td style="border-left:1pt solid black;"><center>{{ bien.id }}</center></td> 
+            <td style="border-left:1pt solid black;"><center>{{ bien.nbPiece }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.nbChambre }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.superficie }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.prix }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.chauffage }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.annee }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.localisation }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.etat }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ bien.idType.libelle }}</center></td>
+            <td style="border-left:1pt solid black;"><button class="btn btn-primary" href="/modifierBien{{ bien.id }}">Modifier</button></td>
+            <td style="border-left:1pt solid black;border-right:1pt solid black;"><button class="btn btn-warning">Supprimer</button></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br/>
+    </div></center>
+{% endblock %}
