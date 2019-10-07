@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des biens{% endblock %}
+
+{% block body %}
+    <center>
+    {% if found == -1 %}
+        <p class="btn btn-warning">L'id ne correspond à aucun type!</p>
+        <br/><br/>
+    {% endif %}
+    <div style="width: 55%; border: 1px solid black; background-color: background"><br/>
+    <h3><center>Liste des types :</center></h3>
+    <table width="95%">
+        <tr style="border-bottom:1pt solid black;">
+            <th>Identifiant</th>
+            <th>Libellé</th>
+	</tr>
+    {%  for type in lesTypes %}
+        <tr style="border-bottom:1pt solid black;">
+            <td style="border-left:1pt solid black;"><center>{{ type.id }}</center></td> 
+            <td style="border-left:1pt solid black;"><center>{{ type.libelle }}</center></td>
+            <td style="border-left:1pt solid black;border-right:1pt solid black;"><center><a class="btn btn-warning" href="/supprimerType/{{ type.id }}">Supprimer</a></center></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br/>
+    </div></center>
+{% endblock %}

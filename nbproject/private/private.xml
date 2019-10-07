@@ -3,12 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/Immostar/src/Entity/Bien.php</file>
+            <file>file:/var/www/html/Immostar/templates/bien/supprimerBien.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Repository/BienRepository.php</file>
+            <file>file:/var/www/html/Immostar/src/Entity/Type.php</file>
+            <file>file:/var/www/html/Immostar/templates/visiteur/supprimerVisiteur.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/visiteur/consulterVisiteurs.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/visiteur/ajouterVisiteur.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Controller/VisiteurController.php</file>
+            <file>file:/var/www/html/Immostar/.env</file>
+            <file>file:/var/www/html/Immostar/templates/bien/ajouterBien.html.twig</file>
             <file>file:/var/www/html/Immostar/templates/accueil/index.html.twig</file>
-            <file>file:/var/www/html/Immostar/templates/base.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/bien/ajouterTypeBien.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Form/VisiteType.php</file>
+            <file>file:/var/www/html/Immostar/src/Form/TypeBienType.php</file>
+            <file>file:/var/www/html/Immostar/src/Form/VisiteurType.php</file>
+            <file>file:/var/www/html/Immostar/templates/visiteur/modifierVisiteur.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Form/BienType.php</file>
             <file>file:/var/www/html/Immostar/src/Controller/AccueilController.php</file>
             <file>file:/var/www/html/Immostar/src/Controller/BienController.php</file>
-            <file>file:/var/www/html/Immostar/.env</file>
+            <file>file:/var/www/html/Immostar/templates/bien/consulterBien.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/bien/supprimerType.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Controller/VisiteController.php</file>
+            <file>file:/var/www/html/Immostar/templates/visite/ajouterVisite.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Entity/Bien.php</file>
+            <file>file:/var/www/html/Immostar/templates/bien/consulterTypesBien.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Entity/Visiteur.php</file>
+            <file>file:/var/www/html/Immostar/templates/bien/modifierBien.html.twig</file>
         </group>
     </open-files>
 </project-private>

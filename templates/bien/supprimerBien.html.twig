@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des biens{% endblock %}
+
+{% block body %}
+    <center>
+    <div style="width: 55%; border: 1px solid black; background-color: background"><br/>
+        <h2><p>Etes vous sûr de vouloir supprimer ce bien?</p></h2>
+        <a class="btn btn-danger" href="/consulterBien">Annuler</a>
+        <a style="margin-left:20px" class="btn btn-success" href="/suppressionBien/{{ id }}">Valider</a>
+    <br/>
+    <br/>
+    </div></center>
+{% endblock %}

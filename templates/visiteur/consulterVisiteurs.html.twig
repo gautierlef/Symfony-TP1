@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des visiteurs{% endblock %}
+
+{% block body %}
+    <center>
+    {% if found == -1 %}
+        <p class="btn btn-warning">L'id ne correspond à aucun visiteur!</p>
+        <br/><br/>
+    {% endif %}
+    <div style="width: 85%; border: 1px solid black; background-color: background"><br/>
+    <h3><center>Liste des visiteur :</center></h3>
+    <table width="95%">
+        <tr style="border-bottom:1pt solid black;">
+            <th>Identifiant</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse</th>
+            <th>Téléphone</th>
+	</tr>
+    {%  for visiteur in lesVisiteurs %}
+        <tr style="border-bottom:1pt solid black;">
+            <td style="border-left:1pt solid black;"><center>{{ visiteur.id }}</center></td> 
+            <td style="border-left:1pt solid black;"><center>{{ visiteur.nom }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visiteur.prenom }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visiteur.adresse }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visiteur.telephone }}</center></td>
+            <td style="border-left:1pt solid black;"><center><a class="btn btn-primary" href="/modifierVisiteur/{{ visiteur.id }}">Modifier</a></center></td>
+            <td style="border-left:1pt solid black;border-right:1pt solid black;"><center><a class="btn btn-warning" href="/supprimerVisiteur/{{ visiteur.id }}">Supprimer</a></center></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br/>
+    </div></center>
+{% endblock %}
