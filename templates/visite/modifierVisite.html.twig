@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier visite{% endblock %}
+
+{% block body %}
+    {% if success == 1 %}
+        <center><div class="btn btn-success">
+            <a style="color:white">Visite modifiée avec succès!</a>
+        </div></center>
+        <br/><br/>
+    {% endif %}
+    <center><div style="width: 85%; border: 1px solid black; background-color: background"><br/>
+    <table width="95%">
+        <tr style="border-bottom:1pt solid black;">
+            <th>Identifiant du bien</th>
+            <th>Nom du visiteur</th>
+            <th>Suite</th>
+	</tr>
+        <tr style="border-bottom:1pt solid black;">
+            <td style="border-left:1pt solid black;"><center>{{ visite.idBien.id }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visite.idVisiteur.nom }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visite.suite }}</center></td>
+        </tr>
+    </table>  
+    <h3><center>Formulaire de modification de visite :</center></h3>
+    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+    <br/>
+    <div class="row">
+        <div>
+            <a class="btn btn-danger" href="/consulterVisites">Annuler</a>
+            <button style="margin-left: 20px" type="submit" class="btn btn-success">Valider</button>
+        </div>
+    </div>
+    <br/>
+    {{ form_end(form) }}
+    </div></center>
+    <br/>
+{% endblock %}

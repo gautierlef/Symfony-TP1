@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des visites{% endblock %}
+
+{% block body %}
+    <center>
+    {% if found == -1 %}
+        <p class="btn btn-warning">L'id ne correspond à aucune visite!</p>
+        <br/><br/>
+    {% endif %}
+    <div style="width: 85%; border: 1px solid black; background-color: background"><br/>
+    <h3><center>Liste des visite :</center></h3>
+    <table width="95%">
+        <tr style="border-bottom:1pt solid black;">
+            <th>Identifiant</th>
+            <th>Identifiant du bien</th>
+            <th>Nom du visiteur</th>
+            <th>Suite</th>
+	</tr>
+    {%  for visite in lesVisites %}
+        <tr style="border-bottom:1pt solid black;">
+            <td style="border-left:1pt solid black;"><center>{{ visite.id }}</center></td> 
+            <td style="border-left:1pt solid black;"><center>{{ visite.idBien.id }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visite.idVisiteur.nom }}</center></td>
+            <td style="border-left:1pt solid black;"><center>{{ visite.suite }}</center></td>
+            <td style="border-left:1pt solid black;"><center><a class="btn btn-primary" href="/modifierVisite/{{ visite.id }}">Modifier</a></center></td>
+            <td style="border-left:1pt solid black;border-right:1pt solid black;"><center><a class="btn btn-warning" href="/supprimerVisite/{{ visite.id }}">Supprimer</a></center></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br/>
+    </div></center>
+{% endblock %}
